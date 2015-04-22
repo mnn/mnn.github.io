@@ -1,0 +1,28 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,200,700);
+body {
+  background-color: #FFFFFF;
+  color: #2CC4EE;
+  font-family: 'Raleway', sans-serif;
+}
+.half {
+  width: 48%;
+  float: left;
+  margin: 1%;
+}
+h1, h2 {
+  text-align: center;
+  margin: 5px;
+}
+h1 {
+  font-size: 300%;
+}
+h2 {
+  font-size: 250%;
+}
+#container{
+  margin: auto;
+  max-width: 1250px;
+}
+.clear{
+  clear: both;
+}

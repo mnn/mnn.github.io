@@ -1,1 +1,34 @@
-Here will lie an example page of TinyGalleryJS.
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>TinyGalleryJS</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="tgjs.js"></script>
+    <link href="tgjs.css" rel="stylesheet" type="text/css"/>
+
+    <style>
+        body {
+            background-color: dimgray;
+        }
+
+        #main {
+            width: 1024px;
+            border: 1px solid darkgray;
+            min-height: 200px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="main">
+    <h1>TinyGalleryJS</h1>
+
+    <tiny-gallery src="gallery/gallery.json"></tiny-gallery>
+</div>
+
+</body>
+</html>

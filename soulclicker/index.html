@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Soul Clicker</title>
+    <meta name="viewport" content="initial-scale=1"/>
+
+    <link rel="stylesheet" href="css/lib.css">
+
+    <link rel="stylesheet" href="css/app.css">
+
+    <script src="scripts/lib.js"></script>
+
+    <script src="scripts/app.js"></script>
+
+</head>
+<body layout="column">
+<div layout="row" ng-controller="GameCtrl as game" flex class="fullHeight">
+
+    <md-menu class="main-menu">
+        <md-button ng-click="$mdOpenMenu()"
+                   class="narrow-button md-primary md-raised"
+                   aria-label="Main menu">
+            <md-icon md-svg-icon="images/hamburger.svg" class="menu-icon"></md-icon>
+        </md-button>
+        <md-menu-content width="4">
+            <md-menu-item>
+                <md-button ng-click="game.save()">[[menuSave]]</md-button>
+            </md-menu-item>
+            <md-menu-item>
+                <md-button ng-click="game.showStatsDialog($event)">[[menuStats]]</md-button>
+            </md-menu-item>
+            <md-menu-item>
+                <md-button ng-click="game.showOptionsDialog($event)">[[menuOptions]]</md-button>
+            </md-menu-item>
+            <md-menu-divider></md-menu-divider>
+            <md-menu-item>
+                <md-button ng-click="game.showAboutDialog($event)">[[menuAbout]]</md-button>
+            </md-menu-item>
+            <md-menu-divider></md-menu-divider>
+            <md-menu-item ng-click="false">
+                <md-button>[[menuClose]]</md-button>
+            </md-menu-item>
+        </md-menu-content>
+    </md-menu>
+
+    <div id="left-column" flex="40" layout="column" class="fullHeight">
+        <md-card flex="60" class="card-bottle">
+            <md-card-content flex layout-align="center center" layout="column" class="fullHeight">
+                <bottle bank="{{game.state.bank}}"
+                        triggered="game.bottleClicked"
+                        per-second="{{game.state.soulsPerSecond}}"
+                        per-click="{{game.state.soulsPerClick}}"
+                        flex
+                        layout="column"
+                        class="fullHeight"
+                        modifiers="game.state.modifiers"
+                        >
+                </bottle>
+            </md-card-content>
+        </md-card>
+        <md-card flex id="card-army">
+            <md-card-content layout="column" class="fullHeight" flex>
+                <army ng-repeat="monster in game.state.monsters"
+                      state="game.state"
+                      monster="monster"
+                      class="fullHeight"
+                      layout="column"
+                      flex
+                      layout-fill
+                      id="army_{{monster.id}}"
+                        ></army>
+            </md-card-content>
+        </md-card>
+    </div>
+
+    <div id="right-column" flex layout="column" class="fullHeight">
+        <md-card flex="50" class="card-monster">
+            <md-card-content layout="row" layout-fill flex>
+                <monster ng-repeat="monster in game.state.monsters"
+                         monster="monster"
+                         state="game.state"
+                         is-selected="{{game.selectedMonster.id == monster.id}}"
+                         on-selected="game.monsterClicked($index)"
+                         flex
+                         layout-fill
+                         layout="column"
+                         layout-align="center center"
+                        ></monster>
+            </md-card-content>
+        </md-card>
+        <md-card flex class="card-info">
+            <md-card-content>
+                <md-content>
+                    <info data-title="{{game.selectedMonster.getTranslatedName()}}"
+                          count="{{game.selectedMonster.ownedCount}}"
+                            >
+                        <monster-info monster="game.selectedMonster"
+                                      state="game.state"
+                                      hire-clicked="game.hireClicked"
+                                      fire-clicked="game.fireClicked"
+                                      buy-perk-clicked="game.buyPerkClicked"
+                                      sell-perk-clicked="game.sellPerkClicked"
+                                      hire-ten-clicked="game.hireTenClicked"
+                                ></monster-info>
+                    </info>
+                </md-content>
+            </md-card-content>
+        </md-card>
+    </div>
+
+</div>
+
+<div id="animationPile"></div>
+<div id="bonusPile"></div>
+
+</body>
+</html>

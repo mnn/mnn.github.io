@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- The icon can be used freely in both personal and commercial projects with no attribution required, but always appreciated. 
+You may NOT sub-license, resell, rent, redistribute or otherwise transfer the icon without express written permission from iconmonstr.com -->
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<path id="shopping-bag-7-icon" d="M408.769,167.086l-230.373,33.149v261.783l230.373-35.149V167.086z M291.566,53.653
+	c-40.3,5.663-73.049,45.523-73.13,89.029l-0.05,27.217l26.706-3.753l0.051-27.217c0.051-27.546,20.855-52.874,46.369-56.46
+	c25.521-3.587,46.242,15.905,46.191,43.451l-0.051,27.217l26.707-3.753l0.051-27.218C364.491,78.661,331.875,47.988,291.566,53.653z
+	 M212.812,81.258c-21.868,7.044-38.621,29.96-38.667,54.673l-0.051,27.217l-26.656,3.753v-27.217
+	c0.081-43.506,32.83-83.366,73.13-89.029c7.602-1.068,14.93-0.841,21.816,0.518C231.143,58.875,221.074,68.959,212.812,81.258z
+	 M103.231,419.073v-244l50.5,23v257.5L103.231,419.073z"/>
+</svg>

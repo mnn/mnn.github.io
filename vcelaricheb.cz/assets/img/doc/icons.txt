@@ -1,0 +1,1 @@
+book,calendar,clipboard,document,link,map,multi-files,pdf,picture,video,

@@ -1,0 +1,20 @@
+/* line 1, ../scss/tweaks_ie.scss */
+#content {
+  margin-top: -1px;
+}
+
+/* line 5, ../scss/tweaks_ie.scss */
+#wrap {
+  overflow: hidden;
+}
+
+/* line 9, ../scss/tweaks_ie.scss */
+.custom-link .custom-link-icon {
+  width: 120px;
+  height: 120px;
+}
+
+/* line 15, ../scss/tweaks_ie.scss */
+.icon-bar menu-left .item, .icon-bar menu-right .item {
+  margin-top: -1px;
+}

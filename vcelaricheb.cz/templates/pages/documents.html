@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="small-12 column">
+        <h1 ui-view="title">Dokumenty</h1>
+    </div>
+    <div class="small-12 medium-8 columns" ng-show="isMainState()">
+        <custom-links-container max-columns="2">
+            <custom-link name="ZO Cheb"
+                         state="documents.zoCheb"
+                         icon="multi-files"></custom-link>
+            <custom-link name="ZO Skalná"
+                         state="documents.zoSkalna"
+                         icon="multi-files"></custom-link>
+            <custom-link name="OO Cheb"
+                         state="documents.ooCheb"
+                         icon="multi-files"></custom-link>
+            <custom-link name="Pamětní list"
+                         link="http://vcelaricheb.cz/pametni list.pdf"
+                         icon="pdf"></custom-link>
+        </custom-links-container>
+    </div>
+    <div ng-hide="isMainState()">
+        <div class="small-12 medium-8 columns">
+            <a ui-sref="documents">Vrátit se zpět na dokumenty</a>.
+            <div class="med-skip"></div>
+            <div ui-view="content"></div>
+        </div>
+    </div>
+    <div class="medium-4 columns show-for-medium-up">
+        <img src="assets/img/materials.png" class="full-width">
+    </div>
+</div>
